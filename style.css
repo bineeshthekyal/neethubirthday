@@ -1,0 +1,163 @@
+body{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   height:100vh;
+   background-color:#1DB9C3;
+}
+.image{
+  position: absolute;
+  width:100px;
+  height:100px;
+  bottom:190px;
+  left:200px;
+}
+.message{
+  color: red;
+  font-style: italic;
+  font-style: bold;
+}
+.birthdaycard{
+  position:relative;
+  width:250px;
+  height:350px;
+  cursor:pointer;
+  transform-style:preserve-3d;
+  transform:perspective(2500px);
+  transition:1s;
+}
+.birthdaycard:hover{
+  transform:perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 0 10px 100px rgba(0,0,0,0.4);
+}
+.birthdaycard:hover .cardfront{
+  transform:rotateY(-160deg);
+}
+.birthdaycard:hover .happy{
+ visibility:hidden;
+}
+.cardfront{
+  position:relative;
+  background-color:#fff;
+  width:350px;
+  height:350px;
+  overflow:hidden;
+  transform-origin:left;
+  box-shadow:inset 100px 20px 100px rgba(0,0,0,0.2),30px 0 50px
+rgba(0,0,0,0.4);
+  transition:0.6s;
+}
+.happy{
+ font-family:Tahumas,sans-serif;
+ text-align:center;
+ margin:30px;
+ background-image:linear-gradient(120deg,#f6d365 0%,#fda085 100%);
+ transition:0.1s;
+}
+.balloons{
+  position:absolute;
+}
+.balloonone,.balloontwo,.balloonthree,.balloonfour,.balloonfive,.balloonsix{
+  position:absolute;
+  width:85px;
+  height:95px;
+  border-radius:50%;
+}
+.balloonone{
+  background-color:RGBA(239,71,111,0.7);
+  left:-10px;
+  top:50px;
+}
+.balloontwo{
+  background-color:RGBA(6,214,160,0.7);
+  left:50px;
+  top:20px;
+}
+.balloonthree{
+  background-color:RGBA(255,209,102,0.7);
+  left:110px;
+  top:50px;
+}
+.balloonfour{
+  background-color:RGBA(17,138,178,0.7);
+  left:170px;
+  top:20px;
+}
+.balloonfive{
+  background-color:RGBA(239,71,111,0.7);
+  left:210px;
+  top:50px;
+
+}
+.balloonsix{
+  background-color:RGBA(6,214,160,0.7);
+  left:260px;
+  top:20px;
+
+}
+.balloonone:before,.balloontwo:before,.balloonthree:before,.balloonfour:before,.balloonfive:before,.balloonsix:before{
+  content:"";
+  position:absolute;
+  width:1px;
+  height:155px;
+  background-color:#ffd166;
+  top:95px;
+  left:43px;
+}
+.balloonone:after,.ballontwo:after,.balloonthree:after,.balloonfour:after,.balloonfive:after,.balloonsix{
+  content:"";
+  position:absolute;
+  border-right:7px solid transparent;
+  border-left:7px solid transparent;
+  top:94px;
+  left:37px;
+}
+
+.balloonone:after{
+  border-bottom:10px solid #ef476f;
+}
+.balloontwo:after{
+  border-bottom:10px solid #06d6a0;
+}
+.balloonthree:after{
+  border-bottom:10px solid #ffd166;
+}
+.balloonfour:after{
+  border-bottom:10px solid #118ab2;
+}
+.balloonfive:after{
+  border-bottom:10px solid #ef476f;
+}
+.balloonsix:after{
+  border-bottom:10px solid #ffd166;
+}
+
+.cardinside{
+  position:absolute;
+  background-color:#fff;
+  top:0;
+  left:0;
+  width:350px;
+  height:350px;
+  box-shadow:inset 100px 20px 100px rgba(0,0,0,0.2);
+  z-index:-1;
+}
+p{
+ font-family:'Sacramento', cursive;
+ margin:40px;
+ color:#333;
+}
+.none{
+  position:absolute;
+  left:150px;
+  top:300px;
+  color:#333;
+}
+.back{
+  font-family:'Sacramento', cursive;
+  color:#333;
+  text-align:center;
+  margin:30px;
+  outline-color:#333;
+  outline-style:dotted;
+}
